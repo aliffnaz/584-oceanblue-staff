@@ -132,28 +132,6 @@
                                 <th class="text-center col-2">Status</th>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td class="text-center">RS001</td>
-                                    <td class="text-center">770901012341</td>
-                                    <td class="text-center">3</td>
-                                    <td class="text-center">2</td>
-                                    <td class="text-center" width="100">22-12-2022</td>
-                                    <td class="text-center" width="100">24-12-2022</td>
-                                    <td class="text-center">2</td>
-                                    <td class="text-center">1</td>
-                                    <td class="text-center">1</td>
-                                    <td class="text-center">RM80.00</td>
-                                    <td class="text-center">
-                                        <form action="managerViewReservation.html">
-                                            <div class="custom_select text-center">
-                                                <select name="Status" id="Status" class="wide" disabled>
-                                                    <option value="Pending Payment">Pending Payment</option>
-                                                    <option value="paid">Paid</option>
-                                                </select>
-                                            </div>
-                                        </form>
-                                    </td>
-                                </tr>
                                 <c:forEach items="${guest}" var="guest">
 									<tr>
 										<td class="text-center"><c:out value="${reservation.reservationID}" /></td>
