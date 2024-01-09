@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+    
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -128,17 +131,7 @@
                     </div>
 
 
-                    <div class="row m-3">
-                        <div class="col-1"></div>
-                        <div class="col pt-3">
-                            <span>
-                                <h6>Room ID</h6>
-                            </span>
-                        </div>
-                        <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" placeholder="R1" disabled>
-                        </div>
-                    </div>
+                    
                     <div class="row m-3">
                         <div class="col-1"></div>
                         <div class="col pt-3">
@@ -147,7 +140,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" placeholder="A01" disabled>
+                            <input type="text" name="" id="" class="form-control" value="<c:out value="${room.roomNum}/>" disabled>
                         </div>
                     </div>
                     <div class="row m-3">
@@ -158,7 +151,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" placeholder="4" disabled>
+                            <input type="text" name="" id="" class="form-control" value="<c:out value="${room.maxGuest}/>" disabled>
                         </div>
                     </div>
                     <div class="row m-3">
@@ -169,7 +162,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" placeholder="RM80.00" disabled>
+                            <input type="text" name="" id="" class="form-control" value="<c:out value="${room.roomRate}/>" disabled>
                         </div>
                     </div>
                     <div class="row m-3">
@@ -180,7 +173,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" placeholder="Standard" disabled>
+                            <input type="text" name="" id="" class="form-control" value="<c:out value="${room.roomType}/>" disabled>
                         </div>
                     </div>
                     <div class="row m-3">
@@ -191,15 +184,26 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" placeholder="22 x 28 ft" disabled>
+                            <input type="text" name="" id="" class="form-control" value="<c:out value="${room.roomSize}/>" disabled>
+                        </div>
+                    </div>
+                    <div class="row m-3">
+                        <div class="col-1"></div>
+                        <div class="col pt-3">
+                            <span>
+                                <h6>Room Size</h6>
+                            </span>
+                        </div>
+                        <div class="col-8">
+                            <input type="text" name="" id="" class="form-control" value="<c:out value="${room.roomStatus}/>" disabled>
                         </div>
                     </div>
                     <div class="row m-5">
                         <div class="col text-center">
-                            <a href="staffUpdateRoom.html" class="btn btn-dark btn-lg"
+                            <a href="staffUpdateRoom.jsp" class="btn btn-dark btn-lg"
                                 style="border-radius: 3px 3px 3px 3px; height: auto; width:150px">Edit</a>
                             &nbsp;
-                            <a href="staffRoomList.html" class="btn btn-danger btn-lg"
+                            <a href="staffRoomList.jsp" class="btn btn-danger btn-lg"
                                 style="border-radius: 3px 3px 3px 3px; height: auto; width:150px" onclick="success()">Delete</a>
 
                             <script>
