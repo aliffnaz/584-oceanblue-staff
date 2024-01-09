@@ -154,50 +154,37 @@
                                         </form>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td class="text-center">RS002</td>
-                                    <td class="text-center">880102034571</td>
-                                    <td class="text-center">4</td>
-                                    <td class="text-center">1</td>
-                                    <td class="text-center">30-12-2022</td>
-                                    <td class="text-center">31-12-2022</td>
-                                    <td class="text-center">2</td>
-                                    <td class="text-center">2</td>
-                                    <td class="text-center">1</td>
-                                    <td class="text-center">RM80.00</td>
-                                    <td class="text-center">
-                                        <form action="managerViewReservation.html">
-                                            <div class="custom_select">
-                                                <select name="Status" id="Status" class="wide" disabled>
-                                                    <option value="Pending Payment">Pending Payment</option>
-                                                    <option value="paid" selected>Paid</option>
-                                                </select>
-                                            </div>
-                                        </form>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">RS003</td>
-                                    <td class="text-center">970625040312</td>
-                                    <td class="text-center">7</td>
-                                    <td class="text-center">2</td>
-                                    <td class="text-center">1-1-2023</td>
-                                    <td class="text-center">3-1-2023</td>
-                                    <td class="text-center">4</td>
-                                    <td class="text-center">3</td>
-                                    <td class="text-center">2</td>
-                                    <td class="text-center">RM160.00</td>
-                                    <td class="text-center">
-                                        <form action="managerViewReservation.html">
-                                            <div class="custom_select">
-                                                <select name="Status" id="Status" class="wide" disabled>
-                                                    <option value="Pending Payment">Pending Payment</option>
-                                                    <option value="paid" selected>Paid</option>
-                                                </select>
-                                            </div>
-                                        </form>
-                                    </td>
-                                </tr>
+                                <c:forEach items="${guest}" var="guest">
+									<tr>
+										<td class="text-center"><c:out value="${reservation.reservationID}" /></td>
+										<td class="text-center"><c:out
+												value="${reservation.guestICNumber}" /></td>
+										<td class="text-center"><c:out
+												value="${reservation.guestQuantity}" /></td>
+										<td class="text-center"><c:out
+												value="${reservation.durationOfStay}" /></td>
+                                        <td class="text-center"><c:out
+												value="${reservation.dateStart}" /></td>
+                                        <td class="text-center"><c:out
+												value="${reservation.dateEnd}" /></td>
+										<td class="text-center"><c:out
+												value="${reservation.totalAdult}" /></td>
+										<td class="text-center"><c:out
+												value="${reservation.totalKids}" /></td>
+                                        <td class="text-center"><c:out
+												value="${reservation.totalRoom}" /></td>
+                                        <td class="text-center"><c:out
+												value="${reservation.totalPayment}" /></td>
+                                        <td class="text-center"><c:out
+												value="${reservation.reserveStatus}" /></td>
+
+										<td class="text-center"><a
+											href="staffController?staffViewGuest=1&id=<c:out value="${guest.guestICNumber}"/>"><i
+												class="bi bi-eye-fill" style="font-size: 20px;"></i></a></td>
+										<td class="text-center"><a href=" "><i
+												class="bi bi-trash3-fill" style="font-size: 20px;"></i></a></td>
+									</tr>
+								</c:forEach>
                             </tbody>
                         </table>
                     </div>
