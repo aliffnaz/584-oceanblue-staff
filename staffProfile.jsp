@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>  
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -143,7 +146,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" value="Muhammad Anas Bin Ali" disabled>
+                            <input type="text" name="" id="" class="form-control" value="<c:out value="${staff.staffName}"/>"disabled>
                         </div>
                     </div>
 
@@ -155,7 +158,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" value="940625056743" disabled>
+                            <input type="text" name="" id="" class="form-control" value="<c:out value="${staff.staffICNumber}"/>" disabled>
                         </div>
                     </div>
 
@@ -167,7 +170,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" value="Ayer Keroh, Melaka" disabled>
+                            <input type="text" name="" id="" class="form-control" value="<c:out value="${staff.staffAddress}"/>" disabled>
                         </div>
                     </div>
 
@@ -179,11 +182,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <select name="" id="" class="form-control form-select" disabled>
-                                <option value="">Select</option>
-                                <option value="" Selected>Male</option>
-                                <option value="">Female</option>
-                            </select>
+                            <input type="text" name="" id="" class="form-control" value="<c:out value="${staff.staffGender}"/>" disabled>
                         </div>
                     </div>
 
@@ -195,12 +194,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <select name="" id="" class="form-control form-select" disabled>
-                                <option value="">Select</option>
-                                <option value="" Selected>Melayu</option>
-                                <option value="">Cina</option>
-                                <option value="">India</option>
-                            </select>
+                            <input type="text" name="" id="" class="form-control" value="<c:out value="${staff.staffRace}"/>" disabled>
                         </div>
                     </div>
 
@@ -212,13 +206,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <select name="" id="" class="form-control form-select" disabled>
-                                <option value="">Select</option>
-                                <option value="" Selected>Islam</option>
-                                <option value="">Budha</option>
-                                <option value="">Christian</option>
-                            </select>
-
+                            <input type="text" name="" id="" class="form-control" value="<c:out value="${staff.staffReligion}"/>" disabled>
                         </div>
                     </div>
 
@@ -230,14 +218,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <select name="" id="" class="form-control form-select" disabled>
-                                <option value="">Select</option>
-                                <option value="" Selected>Single</option>
-                                <option value="">Married</option>
-                                <option value="">Divorce</option>
-                                <option value="">Widowed</option>
-                            </select>
-
+                            <input type="text" name="" id="" class="form-control" value="<c:out value="${staff.staffMartialStatus}"/>" disabled>
                         </div>
                     </div>
 
@@ -249,13 +230,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <select name="" id="" class="form-control form-select" disabled>
-                                <option value="">Select</option>
-                                <option value="" Selected>Manager</option>
-                                <option value="">Front Office</option>
-                                <option value="">Finance</option>
-                            </select>
-
+                            <input type="text" name="" id="" class="form-control" value="<c:out value="${staff.staffRole}"/>" disabled>
                         </div>
                     </div>
 
@@ -267,7 +242,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" value="01234567890" disabled>
+                            <input type="text" name="" id="" class="form-control" value="<c:out value="${staff.staffPhoneNumber}"/>" disabled> 
                         </div>
                     </div>
 
@@ -279,7 +254,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" value="Karikram@gmail.com" disabled>
+                            <input type="text" name="" id="" class="form-control" value="Karikram@gmail.com" value="<c:out value="${staff.staffEmail}"/>" disabled>
                         </div>
                     </div>
 
@@ -292,7 +267,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" value="AnasAli@95" disabled>
+                            <input type="text" name="" id="" class="form-control" value="<c:out value="${staff.staffPassword}"/>" disabled>
                         </div>
                     </div>
 
