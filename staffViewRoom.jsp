@@ -140,7 +140,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" value="<c:out value="${room.roomNum}/>" disabled>
+                            <input type="text" name="" id="" class="form-control" value="<c:out value="${room.roomNum}"/>" disabled>
                         </div>
                     </div>
                     <div class="row m-3">
@@ -151,7 +151,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" value="<c:out value="${room.maxGuest}/>" disabled>
+                            <input type="text" name="" id="" class="form-control" value="<c:out value="${room.maxGuest}"/>" disabled>
                         </div>
                     </div>
                     <div class="row m-3">
@@ -162,7 +162,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" value="<c:out value="${room.roomRate}/>" disabled>
+                            <input type="text" name="" id="" class="form-control" value="<c:out value="${room.roomRate}"/>" disabled>
                         </div>
                     </div>
                     <div class="row m-3">
@@ -173,7 +173,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" value="<c:out value="${room.roomType}/>" disabled>
+                            <input type="text" name="" id="" class="form-control" value="<c:out value="${room.roomType}"/>" disabled>
                         </div>
                     </div>
                     <div class="row m-3">
@@ -184,7 +184,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" value="<c:out value="${room.roomSize}/>" disabled>
+                            <input type="text" name="" id="" class="form-control" value="<c:out value="${room.roomSize}"/>" disabled>
                         </div>
                     </div>
                     <div class="row m-3">
@@ -195,7 +195,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" value="<c:out value="${room.roomStatus}/>" disabled>
+                            <input type="text" name="" id="" class="form-control" value="<c:out value="${room.roomStatus}"/>" disabled>
                         </div>
                     </div>
                     <div class="row m-5">

@@ -165,7 +165,7 @@
 												value="${guest.guestAddress}" /></td>
 
 										<td class="text-center"><a
-											href="staffController?staffViewGuest=1&id=<c:out value="${guest.guestICNumber}"/>"><i
+											href="./StaffController?action=view&IC=<c:out value="${guest.guestICNumber}"/>"><i
 												class="bi bi-eye-fill" style="font-size: 20px;"></i></a></td>
 										<td class="text-center"><a href=" "><i
 												class="bi bi-trash3-fill" style="font-size: 20px;"></i></a></td>
