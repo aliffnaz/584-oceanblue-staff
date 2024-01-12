@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -135,18 +137,7 @@
                     </div>
 
 
-                    <div class="row m-3">
-                        <div class="col-1"></div>
-                        <div class="col pt-3">
-                            <span>
-                                <h6>Room ID</h6>
-                            </span>
-                        </div>
-                        <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" placeholder="R1" disabled>
-                        </div>
-                    </div>
-                    <div class="row m-3">
+                   <div class="row m-3">
                         <div class="col-1"></div>
                         <div class="col pt-3">
                             <span>
@@ -154,7 +145,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" placeholder="A01">
+                            <input type="text" name="" value="<c:out value="${room.roomID}"/>" id="" class="form-control" placeholder="A01">
                         </div>
                     </div>
                     <div class="row m-3">
@@ -165,7 +156,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="number" name="" id="" class="form-control" placeholder="4">
+                            <input type="number" name="maxGuest" value="<c:out value="${room.maxGuest}"/>" id="" class="form-control" placeholder="4">
                         </div>
                     </div>
                     <div class="row m-3">
@@ -176,7 +167,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" placeholder="RM80.00">
+                            <input type="text" name="roomRate" value="<c:out value="${room.roomRate}"/>" id="" class="form-control" placeholder="RM80.00">
                         </div>
                     </div>
                     <div class="row m-3">
@@ -187,12 +178,10 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <div class="custom_select">
-                                <select name="roomType" id="" class="wide">
-                                    <option value="standard" style="font-size: 16px;">Standard</option>
-                                    <option value="deluxe" style="font-size: 16px;">Deluxe</option>
-                                </select>
-                            </div>
+                            <select name="roomType" id="" class="form-control">
+                                <option value="standard" style="font-size: 16px;" <c:if test=${room.roomType == "Standard"} >Selected</c:if>>Standard</option>
+                                <option value="deluxe" style="font-size: 16px;" <c:if test=${room.roomType == "Deluxe"} >Selected</c:if> >Deluxe</option>
+                            </select>
                         </div>
                     </div>
                     <div class="row m-3">
@@ -203,20 +192,21 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" placeholder="22 x 28 ft">
+                            <input type="text" name="roomSize" value="<c:out value="${room.roomSize}"/>" id="" class="form-control" placeholder="22 x 28 ft">
                         </div>
                     </div>
+                    
                     <div class="row m-5">
                         <div class="col text-center">
-                            <a href="staffViewRoom.html" class="btn btn-dark btn-lg"
+                            <a href="StaffController?action=VIEW&user=staff" class="btn btn-dark btn-lg"
                                 style="border-radius: 3px 3px 3px 3px; height: auto; width:150px" onclick="success()">Update</a>
-
                             <script>
                                 function success() {
                                     alert("Successfully Update");
                                 }
 
                             </script>
+                            &nbsp;
                             <a href="staffViewRoom.html" class="btn btn-danger btn-lg"
                                 style="border-radius: 3px 3px 3px 3px; height: auto; width:150px">Cancel</a>
                         </div>
