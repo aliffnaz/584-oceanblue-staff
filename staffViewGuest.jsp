@@ -147,7 +147,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" value="<c:out value="${guest.guestICNumber}"/>" disabled>
+                            <input type="text" name="guestICNumber" id="" class="form-control" value="<c:out value="${guest.guestICNumber}"/>" disabled>
                         </div>
                     </div>
 
@@ -159,7 +159,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" value="<c:out value="${guest.guestName}"/>" disabled>
+                            <input type="text" name="guestName" id="" class="form-control" value="<c:out value="${guest.guestName}"/>" disabled>
                         </div>
                     </div>
 
@@ -171,7 +171,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" value="<c:out value="${guest.guestPhoneNumber}"/>" disabled>
+                            <input type="text" name="guestPhoneNumber" id="" class="form-control" value="<c:out value="${guest.guestPhoneNumber}"/>" disabled>
                         </div>
                     </div>
 
@@ -183,7 +183,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <select name="staffReligion" id="" class="form-control form-select" disabled>
+                            <select name="guestGender" id="" class="form-control form-select" disabled>
                                 <option value="">Select</option>
                                 <option value="Male" <c:if test="${guest.guestGender == 'Male'}">Selected</c:if>>Male</option>
                                 <option value="Female" <c:if test="${guest.guestGender == 'Female'}">Selected</c:if>>Female</option>
@@ -200,7 +200,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <select name="staffRace" id="" class="form-control form-select" disabled>
+                            <select name="guestRace" id="" class="form-control form-select" disabled>
                                 <option value="">Select</option>
                                 <option value="Melayu" <c:if test="${guest.guestRace == 'Melayu'}">Selected</c:if>>Melayu</option>
                                 <option value="Cina" <c:if test="${guest.guestRace == 'Cina'}">Selected</c:if>>Cina</option>
@@ -235,7 +235,7 @@
                         </div>
                         <div class="col-8">
                             <div class="col-8">
-                                <input type="text" name="" id="" class="form-control" value="<c:out value="${guest.guestEmail}"/>" disabled>
+                                <input type="text" name="guestEmail" id="" class="form-control" value="<c:out value="${guest.guestEmail}"/>" disabled>
                             </div>
                         </div>
                     </div>
@@ -248,7 +248,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <textarea name="" id="" class="form-control" value="<c:out value="${guest.guestAddress}"/>" disabled></textarea>
+                            <textarea name="guestAddress" id="" class="form-control" value="<c:out value="${guest.guestAddress}"/>" disabled></textarea>
                         </div>
                     </div>
 
