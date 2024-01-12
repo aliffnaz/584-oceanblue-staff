@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -145,7 +147,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" placeholder="010205012313" disabled>
+                            <input type="text" name="" id="" class="form-control" value="<c:out value="${guest.guestICNumber}"/>" disabled>
                         </div>
                     </div>
 
@@ -157,7 +159,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" placeholder="Haiqal" disabled>
+                            <input type="text" name="" id="" class="form-control" value="<c:out value="${guest.guestName}"/>" disabled>
                         </div>
                     </div>
 
@@ -169,7 +171,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" placeholder="011-17246568" disabled>
+                            <input type="text" name="" id="" class="form-control" value="<c:out value="${guest.guestPhoneNumber}"/>" disabled>
                         </div>
                     </div>
 
@@ -181,11 +183,12 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <select name="" id="" class="form-control form-select" disabled>
+                            <select name="staffReligion" id="" class="form-control form-select" disabled>
                                 <option value="">Select</option>
-                                <option value="" Selected>Male</option>
-                                <option value="">Female</option>
+                                <option value="Male" <c:if test="${guest.guestGender == 'Male'}">Selected</c:if>>Male</option>
+                                <option value="Female" <c:if test="${guest.guestGender == 'Female'}">Selected</c:if>>Female</option>
                             </select>
+            
                         </div>
                     </div>
 
@@ -197,11 +200,11 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <select name="" id="" class="form-control form-select" disabled>
+                            <select name="staffRace" id="" class="form-control form-select" disabled>
                                 <option value="">Select</option>
-                                <option value="" Selected>Melayu</option>
-                                <option value="">Cina</option>
-                                <option value="">India</option>
+                                <option value="Melayu" <c:if test="${guest.guestRace == 'Melayu'}">Selected</c:if>>Melayu</option>
+                                <option value="Cina" <c:if test="${guest.guestRace == 'Cina'}">Selected</c:if>>Cina</option>
+                                <option value="India" <c:if test="${guest.guestRace == 'India'}">Selected</c:if>>India</option>
                             </select>
                         </div>
                     </div>
@@ -214,11 +217,11 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <select name="" id="" class="form-control form-select" disabled>
+                            <select name="guestReligion" id="" class="form-control form-select" disabled>
                                 <option value="">Select</option>
-                                <option value="" Selected>Islam</option>
-                                <option value="">Budha</option>
-                                <option value="">Christian</option>
+                                <option value="Islam" <c:if test="${guest.guestReligion == 'Islam'}">Selected</c:if>>Islam</option>
+                                <option value="Buddha" <c:if test="${guest.guestReligion == 'Buddha'}">Selected</c:if>>Buddha</option>
+                                <option value="Christian" <c:if test="${guest.guestReligion == 'Christian'}">Selected</c:if>>Christian</option>
                             </select>
                         </div>
                     </div>
@@ -232,7 +235,7 @@
                         </div>
                         <div class="col-8">
                             <div class="col-8">
-                                <input type="text" name="" id="" class="form-control" placeholder="haiqalizze02@gmail.com" disabled>
+                                <input type="text" name="" id="" class="form-control" value="<c:out value="${guest.guestEmail}"/>" disabled>
                             </div>
                         </div>
                     </div>
@@ -245,7 +248,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <textarea name="" id="" class="form-control" placeholder="275 Jln 4 Off Jln Chan Sow Lin, 55200 Wilayah Persekutuan Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur" disabled></textarea>
+                            <textarea name="" id="" class="form-control" value="<c:out value="${guest.guestAddress}"/>" disabled></textarea>
                         </div>
                     </div>
 
