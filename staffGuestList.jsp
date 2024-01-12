@@ -146,16 +146,21 @@
 								<th class="text-center" colspan="2">Action</th>
 							</thead>
 							<tbody>
-								<c:forEach items="${guest}" var="guest">
+								<c:forEach items="${guests}" var="guest">
 									<tr>
+									<td class="text-center"><c:out value="${guest.guestICNumber}" /></td>
 										<td class="text-center"><c:out value="${guest.guestName}" /></td>
 										<td class="text-center"><c:out
 												value="${guest.guestPhoneNumber}" /></td>
 										<td class="text-center"><c:out
 												value="${guest.guestGender}" /></td>
+												<td class="text-center"><c:out
+												value="${guest.guestRace}" /></td>
 										<td class="text-center"><c:out
 												value="${guest.guestReligion}" /></td>
-										<td class="text-center"></td>
+										<td class="text-center"><c:out
+												value="${guest.guestEmail}" /></td>
+										
 										<td class="text-center"><c:out
 												value="${guest.guestAddress}" /></td>
 
