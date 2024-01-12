@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+    
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -10,10 +13,12 @@
 
     <!-- Favicons-->
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
-    <link rel="apple-touch-icon" type="image/x-icon" href="img/logo_dchalet.png">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/logo_dchalet.png">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="img/logo_dchalet.png">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/logo_dchalet.png">
+    <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114"
+        href="img/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144"
+        href="img/apple-touch-icon-144x144-precomposed.png">
 
     <!-- GOOGLE WEB FONT-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,11 +40,8 @@
     <div id="preloader">
         <div data-loader="circle-side"></div>
     </div><!-- /Page Preload -->
-
     <div class="layer"></div>
-
-
-    <header class="reveal_header bg-dark">
+    <header class="reveal_header" style="background-color: #24262d;">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-6">
@@ -103,109 +105,123 @@
     </div>
     <!-- /nav_panel -->
 
+
     <main>
-        <div class="container mt-5">
-            &nbsp;
-        </div>
+        <div class="container mt-5">&nbsp;</div>
         <div class="container mt-5 mb-5 align-items-center">
             <div class="row">
                 <div class="col"></div>
                 <div class="col-md card card-body py-5">
-                    <div class="row my-3 text-center">
-                        <span>
-                            <h1>Reservation List</h1>
-                        </span>
+
+                    <div class="row m-5">
+                        <div class="col-2 text-center">
+                            <a href="staffRoomList.html">
+                                <div class="bi bi-arrow-left-circle" style="font-size: 50px;"></div>
+                            </a>
+                        </div>
+                        <div class="col-md-8 text-center pt-3">
+                            <div class="">
+
+                                <h1>Room Information</h1>
+                            </div>
+                        </div>
+                        <div class="col-2">
+
+                        </div>
                     </div>
-                    <div class="row mx-2">
-                        <table class="table table-hover table-bordered">
-                            <thead style="vertical-align: middle;">
-                                <th class="text-center">Reservation ID</th>
-                                <th class="text-center">Guest IC Number</th>
-                                <th class="text-center">Guest Quantity</th>
-                                <th class="text-center">Duration of Stay</th>
-                                <th class="text-center">Date Start</th>
-                                <th class="text-center">Date End</th>
-                                <th class="text-center">Total Adult</th>
-                                <th class="text-center">Total Kids</th>
-                                <th class="text-center">Total Room</th>
-                                <th class="text-center">Total Payment</th>
-                                <th class="text-center col-2">Status</th>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="text-center">RS001</td>
-                                    <td class="text-center">770901012341</td>
-                                    <td class="text-center">3</td>
-                                    <td class="text-center">2</td>
-                                    <td class="text-center" width="100">22-12-2022</td>
-                                    <td class="text-center" width="100">24-12-2022</td>
-                                    <td class="text-center">2</td>
-                                    <td class="text-center">1</td>
-                                    <td class="text-center">1</td>
-                                    <td class="text-center">RM80.00</td>
-                                    <td class="text-center">
-                                        <form action="managerViewReservation.html">
-                                            <div class="custom_select text-center">
-                                                <select name="Status" id="Status" class="wide" disabled>
-                                                    <option value="Pending Payment">Pending Payment</option>
-                                                    <option value="paid">Paid</option>
-                                                </select>
-                                            </div>
-                                        </form>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">RS002</td>
-                                    <td class="text-center">880102034571</td>
-                                    <td class="text-center">4</td>
-                                    <td class="text-center">1</td>
-                                    <td class="text-center">30-12-2022</td>
-                                    <td class="text-center">31-12-2022</td>
-                                    <td class="text-center">2</td>
-                                    <td class="text-center">2</td>
-                                    <td class="text-center">1</td>
-                                    <td class="text-center">RM80.00</td>
-                                    <td class="text-center">
-                                        <form action="managerViewReservation.html">
-                                            <div class="custom_select">
-                                                <select name="Status" id="Status" class="wide" disabled>
-                                                    <option value="Pending Payment">Pending Payment</option>
-                                                    <option value="paid" selected>Paid</option>
-                                                </select>
-                                            </div>
-                                        </form>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">RS003</td>
-                                    <td class="text-center">970625040312</td>
-                                    <td class="text-center">7</td>
-                                    <td class="text-center">2</td>
-                                    <td class="text-center">1-1-2023</td>
-                                    <td class="text-center">3-1-2023</td>
-                                    <td class="text-center">4</td>
-                                    <td class="text-center">3</td>
-                                    <td class="text-center">2</td>
-                                    <td class="text-center">RM160.00</td>
-                                    <td class="text-center">
-                                        <form action="managerViewReservation.html">
-                                            <div class="custom_select">
-                                                <select name="Status" id="Status" class="wide" disabled>
-                                                    <option value="Pending Payment">Pending Payment</option>
-                                                    <option value="paid" selected>Paid</option>
-                                                </select>
-                                            </div>
-                                        </form>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+
+
+                    
+                    <div class="row m-3">
+                        <div class="col-1"></div>
+                        <div class="col pt-3">
+                            <span>
+                                <h6>Room Number</h6>
+                            </span>
+                        </div>
+                        <div class="col-8">
+                            <input type="text" name="" id="" class="form-control" value="<c:out value="${room.roomNum}/>" disabled>
+                        </div>
+                    </div>
+                    <div class="row m-3">
+                        <div class="col-1"></div>
+                        <div class="col pt-3">
+                            <span>
+                                <h6>Max Guest</h6>
+                            </span>
+                        </div>
+                        <div class="col-8">
+                            <input type="text" name="" id="" class="form-control" value="<c:out value="${room.maxGuest}/>" disabled>
+                        </div>
+                    </div>
+                    <div class="row m-3">
+                        <div class="col-1"></div>
+                        <div class="col pt-3">
+                            <span>
+                                <h6>Room Rate</h6>
+                            </span>
+                        </div>
+                        <div class="col-8">
+                            <input type="text" name="" id="" class="form-control" value="<c:out value="${room.roomRate}/>" disabled>
+                        </div>
+                    </div>
+                    <div class="row m-3">
+                        <div class="col-1"></div>
+                        <div class="col pt-3">
+                            <span>
+                                <h6>Room Type</h6>
+                            </span>
+                        </div>
+                        <div class="col-8">
+                            <input type="text" name="" id="" class="form-control" value="<c:out value="${room.roomType}/>" disabled>
+                        </div>
+                    </div>
+                    <div class="row m-3">
+                        <div class="col-1"></div>
+                        <div class="col pt-3">
+                            <span>
+                                <h6>Room Size</h6>
+                            </span>
+                        </div>
+                        <div class="col-8">
+                            <input type="text" name="" id="" class="form-control" value="<c:out value="${room.roomSize}/>" disabled>
+                        </div>
+                    </div>
+                    <div class="row m-3">
+                        <div class="col-1"></div>
+                        <div class="col pt-3">
+                            <span>
+                                <h6>Room Size</h6>
+                            </span>
+                        </div>
+                        <div class="col-8">
+                            <input type="text" name="" id="" class="form-control" value="<c:out value="${room.roomStatus}/>" disabled>
+                        </div>
+                    </div>
+                    <div class="row m-5">
+                        <div class="col text-center">
+                            <a href="staffUpdateRoom.jsp" class="btn btn-dark btn-lg"
+                                style="border-radius: 3px 3px 3px 3px; height: auto; width:150px">Edit</a>
+                            &nbsp;
+                            <a href="staffRoomList.jsp" class="btn btn-danger btn-lg"
+                                style="border-radius: 3px 3px 3px 3px; height: auto; width:150px" onclick="success()">Delete</a>
+
+                            <script>
+                                function success() {
+                                    alert("Successfully Deleted");
+                                }
+                            </script>
+                        </div>
                     </div>
                 </div>
                 <div class="col"></div>
             </div>
+            <div class="container mt-5">
+                &nbsp;
+            </div>
+            <!-- <div class="row card card-body align-items-center"> -->
         </div>
-        <br>
+        <!-- </div> -->
     </main>
 
     <footer class="revealed">

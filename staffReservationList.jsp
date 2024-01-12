@@ -10,12 +10,10 @@
 
     <!-- Favicons-->
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
-    <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114"
-        href="img/apple-touch-icon-114x114-precomposed.png">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144"
-        href="img/apple-touch-icon-144x144-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" href="img/logo_dchalet.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/logo_dchalet.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="img/logo_dchalet.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/logo_dchalet.png">
 
     <!-- GOOGLE WEB FONT-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,8 +35,11 @@
     <div id="preloader">
         <div data-loader="circle-side"></div>
     </div><!-- /Page Preload -->
+
     <div class="layer"></div>
-    <header class="reveal_header" style="background-color: #24262d;">
+
+
+    <header class="reveal_header bg-dark">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-6">
@@ -102,122 +103,74 @@
     </div>
     <!-- /nav_panel -->
 
-
     <main>
-        <div class="container mt-5">&nbsp;</div>
+        <div class="container mt-5">
+            &nbsp;
+        </div>
         <div class="container mt-5 mb-5 align-items-center">
             <div class="row">
                 <div class="col"></div>
                 <div class="col-md card card-body py-5">
+                    <div class="row my-3 text-center">
+                        <span>
+                            <h1>Reservation List</h1>
+                        </span>
+                    </div>
+                    <div class="row mx-2">
+                        <table class="table table-hover table-bordered">
+                            <thead style="vertical-align: middle;">
+                                <th class="text-center">Reservation ID</th>
+                                <th class="text-center">Guest IC Number</th>
+                                <th class="text-center">Guest Quantity</th>
+                                <th class="text-center">Duration of Stay</th>
+                                <th class="text-center">Date Start</th>
+                                <th class="text-center">Date End</th>
+                                <th class="text-center">Total Adult</th>
+                                <th class="text-center">Total Kids</th>
+                                <th class="text-center">Total Room</th>
+                                <th class="text-center">Total Payment</th>
+                                <th class="text-center col-2">Status</th>
+                            </thead>
+                            <tbody>
+                                <c:forEach items="${guest}" var="guest">
+									<tr>
+										<td class="text-center"><c:out value="${reservation.reservationID}" /></td>
+										<td class="text-center"><c:out
+												value="${reservation.guestICNumber}" /></td>
+										<td class="text-center"><c:out
+												value="${reservation.guestQuantity}" /></td>
+										<td class="text-center"><c:out
+												value="${reservation.durationOfStay}" /></td>
+                                        <td class="text-center"><c:out
+												value="${reservation.dateStart}" /></td>
+                                        <td class="text-center"><c:out
+												value="${reservation.dateEnd}" /></td>
+										<td class="text-center"><c:out
+												value="${reservation.totalAdult}" /></td>
+										<td class="text-center"><c:out
+												value="${reservation.totalKids}" /></td>
+                                        <td class="text-center"><c:out
+												value="${reservation.totalRoom}" /></td>
+                                        <td class="text-center"><c:out
+												value="${reservation.totalPayment}" /></td>
+                                        <td class="text-center"><c:out
+												value="${reservation.reserveStatus}" /></td>
 
-                    <div class="row m-5">
-                        <div class="col-2 text-center">
-                            <a href="staffRoomList.html">
-                                <div class="bi bi-arrow-left-circle" style="font-size: 50px;"></div>
-                            </a>
-                        </div>
-                        <div class="col-md-8 text-center pt-3">
-                            <div class="">
-
-                                <h1>Room Information</h1>
-                            </div>
-                        </div>
-                        <div class="col-2">
-
-                        </div>
-                    </div>
-
-
-                    <div class="row m-3">
-                        <div class="col-1"></div>
-                        <div class="col pt-3">
-                            <span>
-                                <h6>Room ID</h6>
-                            </span>
-                        </div>
-                        <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" placeholder="R1" disabled>
-                        </div>
-                    </div>
-                    <div class="row m-3">
-                        <div class="col-1"></div>
-                        <div class="col pt-3">
-                            <span>
-                                <h6>Room Number</h6>
-                            </span>
-                        </div>
-                        <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" placeholder="A01" disabled>
-                        </div>
-                    </div>
-                    <div class="row m-3">
-                        <div class="col-1"></div>
-                        <div class="col pt-3">
-                            <span>
-                                <h6>Max Guest</h6>
-                            </span>
-                        </div>
-                        <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" placeholder="4" disabled>
-                        </div>
-                    </div>
-                    <div class="row m-3">
-                        <div class="col-1"></div>
-                        <div class="col pt-3">
-                            <span>
-                                <h6>Room Rate</h6>
-                            </span>
-                        </div>
-                        <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" placeholder="RM80.00" disabled>
-                        </div>
-                    </div>
-                    <div class="row m-3">
-                        <div class="col-1"></div>
-                        <div class="col pt-3">
-                            <span>
-                                <h6>Room Type</h6>
-                            </span>
-                        </div>
-                        <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" placeholder="Standard" disabled>
-                        </div>
-                    </div>
-                    <div class="row m-3">
-                        <div class="col-1"></div>
-                        <div class="col pt-3">
-                            <span>
-                                <h6>Room Size</h6>
-                            </span>
-                        </div>
-                        <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" placeholder="22 x 28 ft" disabled>
-                        </div>
-                    </div>
-                    <div class="row m-5">
-                        <div class="col text-center">
-                            <a href="staffUpdateRoom.html" class="btn btn-dark btn-lg"
-                                style="border-radius: 3px 3px 3px 3px; height: auto; width:150px">Edit</a>
-                            &nbsp;
-                            <a href="staffRoomList.html" class="btn btn-danger btn-lg"
-                                style="border-radius: 3px 3px 3px 3px; height: auto; width:150px" onclick="success()">Delete</a>
-
-                            <script>
-                                function success() {
-                                    alert("Successfully Deleted");
-                                }
-                            </script>
-                        </div>
+										<td class="text-center"><a
+											href="staffController?staffViewGuest=1&id=<c:out value="${guest.guestICNumber}"/>"><i
+												class="bi bi-eye-fill" style="font-size: 20px;"></i></a></td>
+										<td class="text-center"><a href=" "><i
+												class="bi bi-trash3-fill" style="font-size: 20px;"></i></a></td>
+									</tr>
+								</c:forEach>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
                 <div class="col"></div>
             </div>
-            <div class="container mt-5">
-                &nbsp;
-            </div>
-            <!-- <div class="row card card-body align-items-center"> -->
         </div>
-        <!-- </div> -->
+        <br>
     </main>
 
     <footer class="revealed">

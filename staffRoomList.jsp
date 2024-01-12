@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -126,106 +129,30 @@
                                 <th class="text-center" colspan="2">Action</th>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td class="text-center">R1</td>
-                                    <td class="text-center">A01</td>
-                                    <td class="text-center">4</td>
-                                    <td class="text-center">RM80.00</td>
-                                    <td class="text-center">Standard</td>
-                                    <td class="text-center">22 x 28 ft</td>
-                                    <td class="text-center">
+                                <c:forEach items="${room}" var="room">
+									<tr>
+										<td class="text-center"><c:out
+												value="${room.roomNumber}" /></td>
+										<td class="text-center"><c:out
+												value="${room.maxGuest}" /></td>
+										<td class="text-center"><c:out
+												value="${room.roomRate}" /></td>
+                                        <td class="text-center"><c:out
+												value="${room.roomSize}" /></td>
+                                        <td class="text-center"><c:out
+												value="${room.roomStatus}" /></td>
+										
 
-                                        <a href="staffViewRoom.html">
-                                            <i class="bi bi-eye-fill" style="font-size: 20px;"></i>
-                                        </a>
-                                    </td>
-                                    <td class="text-center">
-                                        <a href=" " onclick="success()">
-                                            <i class="bi bi-trash3-fill" style="font-size: 20px;"></i>
-                                        </a>
+										<td class="text-center"><a
+											href="roomController?staffViewRoom=1&roomNumber=<c:out value="${room.roomNumber}"/>"><i
+												class="bi bi-eye-fill" style="font-size: 20px;"></i></a></td>
+										<td class="text-center"><a href=" "><i
+												class="bi bi-trash3-fill" style="font-size: 20px;"></i></a></td>
+									</tr>
+								</c:forEach>
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">R2</td>
-                                    <td class="text-center">A02</td>
-                                    <td class="text-center">4</td>
-                                    <td class="text-center">RM80.00</td>
-                                    <td class="text-center">Standard</td>
-                                    <td class="text-center">22 x 28 ft</td>
-                                    <td class="text-center">
-
-                                        <a href="staffViewRoom.html">
-                                            <i class="bi bi-eye-fill" style="font-size: 20px;"></i>
-                                        </a>
-                                    </td>
-                                    <td class="text-center">
-                                        <a href=" " onclick="success()">
-                                            <i class="bi bi-trash3-fill" style="font-size: 20px;"></i>
-                                        </a>
-
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">R3</td>
-                                    <td class="text-center">A03</td>
-                                    <td class="text-center">4</td>
-                                    <td class="text-center">RM80.00</td>
-                                    <td class="text-center">Standard</td>
-                                    <td class="text-center">22 x 28 ft</td>
-                                    <td class="text-center">
-
-                                        <a href="staffViewRoom.html">
-                                            <i class="bi bi-eye-fill" style="font-size: 20px;"></i>
-                                        </a>
-                                    </td>
-                                    <td class="text-center">
-                                        <a href=" " onclick="success()">
-                                            <i class="bi bi-trash3-fill" style="font-size: 20px;"></i>
-                                        </a>
-
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">R4</td>
-                                    <td class="text-center">B01</td>
-                                    <td class="text-center">8</td>
-                                    <td class="text-center">RM150.00</td>
-                                    <td class="text-center">Deluxe</td>
-                                    <td class="text-center">28 x 32 ft</td>
-                                    <td class="text-center">
-
-                                        <a href="staffViewRoom.html">
-                                            <i class="bi bi-eye-fill" style="font-size: 20px;"></i>
-                                        </a>
-                                    </td>
-                                    <td class="text-center">
-                                        <a href=" " onclick="success()">
-                                            <i class="bi bi-trash3-fill" style="font-size: 20px;"></i>
-                                        </a>
-
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">R5</td>
-                                    <td class="text-center">B02</td>
-                                    <td class="text-center">8</td>
-                                    <td class="text-center">RM150.00</td>
-                                    <td class="text-center">Deluxe</td>
-                                    <td class="text-center">28 x 32 ft</td>
-                                    <td class="text-center">
-
-                                        <a href="staffViewRoom.html">
-                                            <i class="bi bi-eye-fill" style="font-size: 20px;"></i>
-                                        </a>
-                                    </td>
-                                    <td class="text-center">
-                                        <a href=" " onclick="success()">
-                                            <i class="bi bi-trash3-fill" style="font-size: 20px;"></i>
-                                        </a>
-
-                                    </td>
-                                </tr>
+                                
+                                
                             </tbody>
                         </table>
 

@@ -171,52 +171,6 @@
 												class="bi bi-trash3-fill" style="font-size: 20px;"></i></a></td>
 									</tr>
 								</c:forEach>
-								<tr>
-									<td class="text-center">010205012313</td>
-									<td class="text-center">Haiqal</td>
-									<td class="text-center">011-17246568</td>
-									<td class="text-center">Male</td>
-									<td class="text-center">Malay</td>
-									<td class="text-center">Muslim</td>
-									<td class="text-center">haiqalizze02@gmail.com</td>
-									<td class="text-center">275 Jln 4 Off Jln Chan Sow Lin,
-										55200 Wilayah Persekutuan Kuala Lumpur, Wilayah Persekutuan
-										Kuala Lumpur</td>
-									<td class="text-center"><a href="staffViewGuest.html"><i
-											class="bi bi-eye-fill" style="font-size: 20px;"></i></a></td>
-									<td class="text-center"><a href=" "><i
-											class="bi bi-trash3-fill" style="font-size: 20px;"></i></a></td>
-								</tr>
-								<tr>
-									<td class="text-center">890524054568</td>
-									<td class="text-center">Azalea</td>
-									<td class="text-center">014-7138969</td>
-									<td class="text-center">Female</td>
-									<td class="text-center">Malay</td>
-									<td class="text-center">Muslim</td>
-									<td class="text-center">azaleaAzizi@gmail.com</td>
-									<td class="text-center">No 42, Jalan PRI 22, Taman Paya
-										Rumput Indah, 76450 Paya Rumput, Melaka</td>
-									<td class="text-center"><a href="staffViewGuest.html"><i
-											class="bi bi-eye-fill" style="font-size: 20px;"></i></a></td>
-									<td class="text-center"><a href=" "><i
-											class="bi bi-trash3-fill" style="font-size: 20px;"></i></a></td>
-								</tr>
-								<tr>
-									<td class="text-center">990625040044</td>
-									<td class="text-center">Balqis</td>
-									<td class="text-center">014-6070102</td>
-									<td class="text-center">Female</td>
-									<td class="text-center">Malay</td>
-									<td class="text-center">Muslim</td>
-									<td class="text-center">pnurdania53@gmail.com</td>
-									<td class="text-center">No 12 Jln Angkasa Nuri 47, Taman
-										Angkasa Nuri, 76100 Durian Tunggal, Melaka</td>
-									<td class="text-center"><a href="staffViewGuest.html"><i
-											class="bi bi-eye-fill" style="font-size: 20px;"></i></a></td>
-									<td class="text-center"><a href=" "><i
-											class="bi bi-trash3-fill" style="font-size: 20px;"></i></a></td>
-								</tr>
 							</tbody>
 						</table>
 					</div>
