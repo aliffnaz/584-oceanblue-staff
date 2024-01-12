@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -160,7 +162,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" value="Muhammad Anas Bin Ali">
+                            <input type="text" name="staffName" id="" class="form-control" value="<c:out value="${staff.staffName}"/>" >
                         </div>
                     </div>
 
@@ -172,7 +174,8 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" value="940625056743">
+                            <input type="text" name="staffICNumber" id="" class="form-control" value="<c:out value="${staff.staffICNumber}"/>" >
+                            
                         </div>
                     </div>
 
@@ -184,7 +187,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" value="Ayer Keroh, Melaka">
+                            <input type="text" name="staffAddress" id="" class="form-control" value="<c:out value="${staff.staffAddress}"/>" >
                         </div>
                     </div>
 
@@ -196,10 +199,11 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <select name="" id="" class="form-control form-select">
+                            <select name="staffGender" id="" class="form-control form-select">
                                 <option value="">Select</option>
-                                <option value="" Selected>Male</option>
-                                <option value="">Female</option>
+                                <option value="Male" style="font-size: 16px;" <c:if test=${staff.staffGender == "Male"} >Selected</c:if>>Male</option>
+                                <option value="Female" style="font-size: 16px;" <c:if test=${staff.staffGender == "Female"} >Selected</c:if>>Female</option>
+                                
                             </select>
                         </div>
                     </div>
@@ -212,11 +216,13 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <select name="" id="" class="form-control form-select">
+                            <select name="staffRace" id="" class="form-control form-select">
                                 <option value="">Select</option>
-                                <option value="" Selected>Melayu</option>
-                                <option value="">Cina</option>
-                                <option value="">India</option>
+                                <option value="Melayu" style="font-size: 16px;" <c:if test=${staff.staffRace == "Melayu"} >Selected</c:if>>Melayu</option>
+                                <option value="Cina" style="font-size: 16px;" <c:if test=${staff.staffRace == "Cina"} >Selected</c:if>>Cina</option>
+                                <option value="India" style="font-size: 16px;" <c:if test=${staff.staffRace == "India"} >Selected</c:if>>India</option>
+                                <option value="Other" style="font-size: 16px;" <c:if test=${staff.staffRace == "Other"} >Selected</c:if>>Other</option>
+                                
                             </select>
                         </div>
                     </div>
@@ -229,11 +235,12 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <select name="" id="" class="form-control form-select">
+                            <select name="staffReligion" id="" class="form-control form-select">
                                 <option value="">Select</option>
-                                <option value="" Selected>Islam</option>
-                                <option value="">Budha</option>
-                                <option value="">Christian</option>
+                                <option value="Islam" style="font-size: 16px;" <c:if test=${staff.staffReligion == "Islam"} >Selected</c:if>>Islam</option>
+                                <option value="Buddha" style="font-size: 16px;" <c:if test=${staff.staffReligion == "Buddha"} >Selected</c:if>>Buddha</option>
+                                <option value="Christian" style="font-size: 16px;" <c:if test=${staff.staffReligion == "Christian"} >Selected</c:if>>Christian</option>
+                                <option value="Other" style="font-size: 16px;" <c:if test=${staff.staffReligion == "Other"} >Selected</c:if>>Other</option>
                             </select>
 
                         </div>
@@ -247,12 +254,12 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <select name="" id="" class="form-control form-select">
+                            <select name="staffMartialStatus" id="" class="form-control form-select">
                                 <option value="">Select</option>
-                                <option value="" Selected>Single</option>
-                                <option value="">Married</option>
-                                <option value="">Divorce</option>
-                                <option value="">Widowed</option>
+                                <option value="Single" style="font-size: 16px;" <c:if test=${staff.staffMartialStatus == "Single"} >Selected</c:if>>Single</option>
+                                <option value="Married" style="font-size: 16px;" <c:if test=${staff.staffMartialStatus == "Married"} >Selected</c:if>>Married</option>
+                                <option value="Divorce" style="font-size: 16px;" <c:if test=${staff.staffMartialStatus == "Divorce"} >Selected</c:if>>Divorce</option>
+                                <option value="Widowed" style="font-size: 16px;" <c:if test=${staff.staffMartialStatus == "Widowed"} >Selected</c:if>>Widowed</option>
                             </select>
 
                         </div>
@@ -266,11 +273,10 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <select name="" id="" class="form-control form-select">
-                                <option value="">Select</option>
-                                <option value="" Selected>Manager</option>
-                                <option value="">Front Office</option>
-                                <option value="">Finance</option>
+                            <select name="staffRole" id="" class="form-control form-select">
+                                <option value="Manager" style="font-size: 16px;" <c:if test=${staff.staffRole == "Manager"} >Selected</c:if>>Manager</option>
+                                <option value="Front Office" style="font-size: 16px;" <c:if test=${staff.staffRole == "Front Office"} >Selected</c:if>>Front Office</option>
+                                <option value="Finance" style="font-size: 16px;" <c:if test=${staff.staffRole == "Finance"} >Selected</c:if>>Finance</option>
                             </select>
 
                         </div>
@@ -284,7 +290,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" value="01234567890">
+                            <input type="text" name="staffPhoneNumber" id="" class="form-control" value="<c:out value="${staff.staffPhoneNumber>
                         </div>
                     </div>
 
@@ -296,7 +302,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" value="Karikram@gmail.com">
+                            <input type="text" name="staffEmail" id="" class="form-control" value="<c:out value="${staff.staffEmail>
                         </div>
                     </div>
 
@@ -309,7 +315,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" value="AnasAli@95">
+                            <input type="text" name="staffPassword" id="" class="form-control" value="<c:out value="${staff.staffPassword>
                         </div>
                     </div>
                     <div class="row m-5">
