@@ -123,31 +123,32 @@
                             </div>
                         </div>
                     </div>
+                    <form action="../StaffController?action=login&user=staff" method="post">
+						<div class="row m-3">
+							<div class="col-1"></div>
+							<div class="col pt-3">
+								<span>
+									<h6>Email</h6>
+								</span>
+							</div>
+							<div class="col-8">
+								<input type="text" name="email" id="" class="form-control">
+							</div>
+						</div>
 
-                    <div class="row m-3">
-                        <div class="col-1"></div>
-                        <div class="col pt-3">
-                            <span>
-                                <h6>Email</h6>
-                            </span>
-                        </div>
-                        <div class="col-8">
-                            <input type="text" name="" id="" class="form-control">
-                        </div>
-                    </div>
-
-                    <div class="row m-3">
-                        <div class="col-1"></div>
-                        <div class="col pt-3">
-                            <span>
-                                <h6>Password</h6>
-                            </span>
-                        </div>
-                        <div class="col-8">
-                            <input type="password" name="" id="" class="form-control">
-                        </div>
-                    </div>
-
+						<div class="row m-3">
+							<div class="col-1"></div>
+							<div class="col pt-3">
+								<span>
+									<h6>Password</h6>
+								</span>
+							</div>
+							<div class="col-8">
+								<input type="password" name="password" id="" class="form-control">
+							</div>
+						</div>
+						<input type="hidden" value="login" name="purpose">
+					</form>
                     <div class="row text-center">
                         <span>Not our staff? Go back <a href="guestLogin.html">here</a></span>
                     </div>
@@ -155,14 +156,14 @@
                     <div class="row m-5">
                         <div class="col-2"></div>
                         <div class="col-4 text-center">
-                            <a href="staffHome.html" class="btn btn-dark btn-lg"
+                            <a href="staffHome.jsp" class="btn btn-dark btn-lg"
                                 style="border-radius: 3px 3px 3px 3px; height: auto; width:150px">Sign In <br>
                                 (Staff)</a>
 
                         </div>
 
                         <div class="col-4 text-center">
-                            <a href="managerHome.html" class="btn btn-dark btn-lg"
+                            <a href="managerHome.jsp" class="btn btn-dark btn-lg"
                                 style="border-radius: 3px 3px 3px 3px; height: auto; width:150px">Sign In <br>
                                 (Manager)</a>
                         </div>
