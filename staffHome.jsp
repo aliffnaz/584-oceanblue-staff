@@ -1,3 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>   
+  
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -112,7 +116,7 @@
     <div class="container margin_120_95" id="first_section">
       <div class="row justify-content-between flex-lg-row-reverse align-items-center">
         <div class="card card-body p-4">
-          <h2>Welcome, Staff !</h2>
+          <h2>Welcome, <c:out value="${staff.staffName}" /></h2>
 
           <div class="clearFix"></div>
           <h1>Room availability for today</h1>
