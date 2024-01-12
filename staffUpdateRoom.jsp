@@ -145,7 +145,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="" value="<c:out value="${room.roomID}"/>" id="" class="form-control" placeholder="A01">
+                            <input type="text" name="roomID" value="<c:out value="${room.roomID}"/>" id="" class="form-control" placeholder="A01">
                         </div>
                     </div>
                     <div class="row m-3">
