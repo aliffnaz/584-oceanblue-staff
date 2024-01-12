@@ -146,7 +146,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" value="<c:out value="${staff.staffName}"/>"disabled>
+                            <input type="text" name="staffName" id="" class="form-control" value="<c:out value="${staff.staffName}"/>"disabled>
                         </div>
                     </div>
 
@@ -158,7 +158,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" value="<c:out value="${staff.staffICNumber}"/>" disabled>
+                            <input type="text" name="staffICNumber" id="" class="form-control" value="<c:out value="${staff.staffICNumber}"/>" disabled>
                         </div>
                     </div>
 
@@ -170,7 +170,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" value="<c:out value="${staff.staffAddress}"/>" disabled>
+                            <input type="text" name="staffAddress" id="" class="form-control" value="<c:out value="${staff.staffAddress}"/>" disabled>
                         </div>
                     </div>
 
@@ -182,7 +182,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" value="<c:out value="${staff.staffGender}"/>" disabled>
+                            <input type="text" name="staffGender" id="" class="form-control" value="<c:out value="${staff.staffGender}"/>" disabled>
                         </div>
                     </div>
 
@@ -194,7 +194,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" value="<c:out value="${staff.staffRace}"/>" disabled>
+                            <input type="text" name="staffRace" id="" class="form-control" value="<c:out value="${staff.staffRace}"/>" disabled>
                         </div>
                     </div>
 
@@ -206,7 +206,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" value="<c:out value="${staff.staffReligion}"/>" disabled>
+                            <input type="text" name="staffReligion" id="" class="form-control" value="<c:out value="${staff.staffReligion}"/>" disabled>
                         </div>
                     </div>
 
@@ -218,7 +218,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" value="<c:out value="${staff.staffMartialStatus}"/>" disabled>
+                            <input type="text" name="staffMartialStatus" id="" class="form-control" value="<c:out value="${staff.staffMartialStatus}"/>" disabled>
                         </div>
                     </div>
 
@@ -230,7 +230,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" value="<c:out value="${staff.staffRole}"/>" disabled>
+                            <input type="text" name="staffRole" id="" class="form-control" value="<c:out value="${staff.staffRole}"/>" disabled>
                         </div>
                     </div>
 
@@ -242,7 +242,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" value="<c:out value="${staff.staffPhoneNumber}"/>" disabled> 
+                            <input type="text" name="staffPhoneNumber" id="" class="form-control" value="<c:out value="${staff.staffPhoneNumber}"/>" disabled> 
                         </div>
                     </div>
 
@@ -254,7 +254,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" value="Karikram@gmail.com" value="<c:out value="${staff.staffEmail}"/>" disabled>
+                            <input type="text" name="staffEmail" id="" class="form-control" value="Karikram@gmail.com" value="<c:out value="${staff.staffEmail}"/>" disabled>
                         </div>
                     </div>
 
@@ -267,7 +267,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="" id="" class="form-control" value="<c:out value="${staff.staffPassword}"/>" disabled>
+                            <input type="text" name="staffPassword" id="" class="form-control" value="<c:out value="${staff.staffPassword}"/>" disabled>
                         </div>
                     </div>
 
