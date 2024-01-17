@@ -120,23 +120,25 @@
                     <div class="row mx-2">
                         <table class="table table-hover table-bordered">
                             <thead>
-                                <th class="text-center">Room ID</th>
                                 <th class="text-center">Room Number</th>
                                 <th class="text-center">Max Guest</th>
                                 <th class="text-center">Room Rate</th>
                                 <th class="text-center">Room Type</th>
                                 <th class="text-center">Room Size</th>
+                                <th class="text-center">Status</th>
                                 <th class="text-center" colspan="2">Action</th>
                             </thead>
                             <tbody>
-                                <c:forEach items="${room}" var="room">
+                                <c:forEach items="${rooms}" var="room">
 									<tr>
 										<td class="text-center"><c:out
-												value="${room.roomNumber}" /></td>
+												value="${room.roomNum}" /></td>
 										<td class="text-center"><c:out
 												value="${room.maxGuest}" /></td>
 										<td class="text-center"><c:out
 												value="${room.roomRate}" /></td>
+										<td class="text-center"><c:out
+												value="${room.roomType}" /></td>
                                         <td class="text-center"><c:out
 												value="${room.roomSize}" /></td>
                                         <td class="text-center"><c:out
@@ -144,7 +146,7 @@
 										
 
 										<td class="text-center"><a
-											href="roomController?staffViewRoom=1&roomNumber=<c:out value="${room.roomNumber}"/>"><i
+											href="RoomController?action=staffViewRoom&roomNum=<c:out value="${room.roomNum}"/>"><i
 												class="bi bi-eye-fill" style="font-size: 20px;"></i></a></td>
 										<td class="text-center"><a href=" "><i
 												class="bi bi-trash3-fill" style="font-size: 20px;"></i></a></td>
@@ -166,7 +168,7 @@
                     <div class="row">
                         <div class="col"></div>
                         <div class="col"></div>
-                        <div class="col-2 text-center"><a class="btn btn-dark" href="staffAddRoom.html">Add</a></div>
+                        <div class="col-2 text-center"><a class="btn btn-dark" href="staff/staffAddRoom.html">Add</a></div>
                     </div>
                 </div>
                 <div class="col">

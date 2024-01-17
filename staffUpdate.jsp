@@ -289,8 +289,8 @@
                                 <h6>Phone Number</h6>
                             </span>
                         </div>
-                        <div class="col-8">
-                            <input type="text" name="staffPhoneNumber" id="" class="form-control" value="<c:out value="${staff.staffPhoneNumber>
+                        <div class="col-8"> 
+                            <input type="text" name="staffPhoneNumber" id="" class="form-control" value="<c:out value="${staff.staffPhoneNumber}" />">
                         </div>
                     </div>
 
@@ -302,7 +302,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="staffEmail" id="" class="form-control" value="<c:out value="${staff.staffEmail>
+                            <input type="text" name="staffEmail" id="" class="form-control" value="<c:out value="${staff.staffEmail}"/>">
                         </div>
                     </div>
 
@@ -315,7 +315,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="staffPassword" id="" class="form-control" value="<c:out value="${staff.staffPassword>
+                            <input type="text" name="staffPassword" id="" class="form-control" value="<c:out value="${staff.staffPassword}"/>">
                         </div>
                     </div>
                     <div class="row m-5">

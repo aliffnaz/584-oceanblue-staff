@@ -115,7 +115,7 @@
 
                     <div class="row m-5">
                         <div class="col-2 text-center">
-                            <a href="staffRoomList.html">
+                            <a href="RoomController?action=staffRoomList">
                                 <div class="bi bi-arrow-left-circle" style="font-size: 50px;"></div>
                             </a>
                         </div>
@@ -191,7 +191,7 @@
                         <div class="col-1"></div>
                         <div class="col pt-3">
                             <span>
-                                <h6>Room Size</h6>
+                                <h6>Room Status</h6>
                             </span>
                         </div>
                         <div class="col-8">
@@ -200,7 +200,7 @@
                     </div>
                     <div class="row m-5">
                         <div class="col text-center">
-                            <a href="staffUpdateRoom.jsp" class="btn btn-dark btn-lg"
+                            <a href="RoomController?action=staffUpdateRoomV&roomNum=<c:out value="${room.roomNum}"/>" class="btn btn-dark btn-lg"
                                 style="border-radius: 3px 3px 3px 3px; height: auto; width:150px">Edit</a>
                             &nbsp;
                             <a href="staffRoomList.jsp" class="btn btn-danger btn-lg"
