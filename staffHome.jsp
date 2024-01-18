@@ -83,15 +83,15 @@
     <div class="sidebar-navigation">
       <nav>
         <ul class="level-1">
-          <li class=""><a href="staffHome.html"><i class="bi bi-house" style="font-size: 25px;"></i> &nbsp;
+          <li class=""><a href=""><i class="bi bi-house" style="font-size: 25px;"></i> &nbsp;
               Home</a></li>
-          <li><a href="staffProfile.html"><i class="bi bi-person-check" style="font-size: 25px;"></i>
+          <li><a href="StaffController?action=staffProfile&staffICNumber=<c:out value="${staff.staffICNumber}"/>"><i class="bi bi-person-check" style="font-size: 25px;"></i>
               &nbsp; View Profile</a></li>
-          <li><a href="staffRoomList.html"><i class="bi bi-clipboard-check" style="font-size: 25px;"></i>
+          <li><a href="RoomController?action=StaffRoomList"><i class="bi bi-clipboard-check" style="font-size: 25px;"></i>
               &nbsp; Manage Room</a></li>
-          <li><a href="staffReservationList.html"><i class="bi bi-view-list" style="font-size: 25px;"></i>
+          <li><a href="ReservationController?action=StaffReservationList"><i class="bi bi-view-list" style="font-size: 25px;"></i>
               &nbsp; Reservation List</a></li>
-          <li><a href="../StaffController?action=list"><i class="bi bi-people" style="font-size: 25px;"></i>
+          <li><a href="StaffController?action=staffGuestList"><i class="bi bi-people" style="font-size: 25px;"></i>
               &nbsp; Manage Guest</a></li>
           <li><a href="staffGenerateReport.html"><i class="bi bi-file-earmark-bar-graph" style="font-size: 25px;"></i>
               &nbsp; Generate Report</a></li>

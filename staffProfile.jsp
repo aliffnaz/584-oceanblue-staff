@@ -122,11 +122,20 @@
 
                 <div class="col-md card card-body py-5">
 
-                    <div class="row mt-3">
-                        <div class="col-md-12 text-center">
+                    <div class="row m-5">
+                        <div class="col-2 text-center">
+                            <a href="StaffController?action=staffHome&staffICNumber=<c:out value="${staff.staffICNumber}"/>">
+                                <div class="bi bi-arrow-left-circle" style="font-size: 50px;"></div>
+                            </a>
+                        </div>
+                        <div class="col-md-8 text-center pt-3">
                             <div class="">
-                                <h1>Staff Profile</h1>
+
+                                <h1>Profile</h1>
                             </div>
+                        </div>
+                        <div class="col-2">
+
                         </div>
                     </div>
 
@@ -218,7 +227,7 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <input type="text" name="staffMartialStatus" id="" class="form-control" value="<c:out value="${staff.staffMartialStatus}"/>" disabled>
+                            <input type="text" name="staffMaritalStatus" id="" class="form-control" value="<c:out value="${staff.staffMaritalStatus}"/>" disabled>
                         </div>
                     </div>
 
@@ -276,7 +285,7 @@
 
 
                         <div class="col">
-                            <a href="staffUpdate.html" class="btn btn-dark btn-lg"
+                            <a href="StaffController?action=staffUpdateV&staffICNumber=<c:out value="${staff.staffICNumber}"/>" class="btn btn-dark btn-lg"
                                 style="border-radius: 3px 3px 3px 3px; height: auto; width:150px">Edit</a>
                         </div>
                     </div>

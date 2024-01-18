@@ -118,7 +118,7 @@
                 <div class="col-md card card-body py-5">
                     <div class="row m-5">
                         <div class="col-2 text-center">
-                            <a href="staffGuestList.html">
+                            <a href="StaffController?action=staffGuestList">
                                 <div class="bi bi-arrow-left-circle" style="font-size: 50px;"></div>
                             </a>
                         </div>
@@ -248,14 +248,14 @@
                             </span>
                         </div>
                         <div class="col-8">
-                            <textarea name="guestAddress" id="" class="form-control" value="<c:out value="${guest.guestAddress}"/>" disabled></textarea>
+                            <textarea name="guestAddress" id="" class="form-control" value="" disabled><c:out value="${guest.guestAddress}"/></textarea>
                         </div>
-                    </div>
+                    </div> 
 
                     <div class="row m-5">
                         <div class="col-1"></div>
                         <div class="col">
-                            <a href="staffGuestList.html" class="btn btn-dark btn-lg"
+                            <a href="StaffController?action=staffGuestList" class="btn btn-dark btn-lg"
                                 style="border-radius: 3px 3px 3px 3px; height: auto; width:150px">Back</a>
                         </div>
                     </div>
