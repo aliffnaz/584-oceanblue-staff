@@ -78,7 +78,7 @@ System.out.println(staffICNumber);
 				<div class="col-6">
 					<a href="index.html" class="logo_normal"><img
 						src="img/logo.png" width="135" height="45" alt=""></a> <a
-						href="index.html" class="logo_sticky"><img
+						href="../index.jsp" class="logo_sticky"><img
 						src="img/logo_sticky.png" width="135" height="45" alt=""></a>
 				</div>
 				<div class="col-6">
