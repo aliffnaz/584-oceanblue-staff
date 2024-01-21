@@ -85,18 +85,87 @@
 				<ul class="level-1">
 					<li><a href="index_logout.html"><i class="bi bi-house"
 							style="font-size: 25px;"></i> &nbsp;Home</a></li>
-					<li><a href=""><i class="bi bi-person-square"
-							style="font-size: 25px;"></i> &nbsp;Profile</a></li>
-					<li><a href="guestViewRoom.html"><i
-							class="bi bi-door-open" style="font-size: 25px;"></i> &nbsp;Our
-							Rooms</a></li>
-					<li><a href=""><i class="bi bi-plus"
-							style="font-size: 25px;"></i> &nbsp;Make Reservation</a></li>
-					<li><a href=""><i class="bi bi-receipt-cutoff"
-							style="font-size: 25px;"></i> &nbsp;Records</a></li>
-					<li class="mt-5"><a href="guestLogin.html"
-						class="btn btn-dark pt-3"
-						style="color: white; border-radius: 10px 10px 10px 10px; height: 50px;">Login</a></li>
+							
+							<%
+					if (login) {
+					%>
+					<li><a
+						href="SidebarController?action=staffProfile&user=staff&staffICNumber=<%=staffICNumber%>"><i
+							class="bi bi-person-square" style="font-size: 25px;"></i>
+							&nbsp;Profile</a></li>
+					<%
+					} else {
+					%>
+					<li><a
+						href="staff/staffLogin.jsp"><i
+							class="bi bi-person-square" style="font-size: 25px;"></i>
+							&nbsp;Profile</a></li>
+					<%
+					}
+					%>
+					
+							<%
+					if (login) {
+					%>
+					<li><a href="SidebarController?action=staffRoomList&user=staff&staffICNumber=${staff.staffICNumber}"><i class="bi bi-person-badge"
+						style="font-size: 25px;"></i>&nbsp; Manage Room</a></li>
+					<%
+					} else {
+					%>
+					<li><a href="staff/staffLogin.jsp"><i
+							class="bi bi-door-open" style="font-size: 25px;"></i> &nbsp;Manage Rooms</a></li>
+					<%
+					}
+					%>
+					
+						
+					
+					
+					<%
+					if (login) {
+					%>
+					<li><a href="SidebarController?action=staffReservationList&user=staff&staffICNumber=${staff.staffICNumber}"><i class="bi bi-pencil-square"
+						style="font-size: 25px;"></i>&nbsp; Reservation List</a></li>
+					<%
+					} else {
+					%>
+					<li><a href="staff/staffLogin.jsp"><i
+							class="bi bi-plus" style="font-size: 25px;"></i> &nbsp;Reservation List</a></li>
+					<%
+					}
+					%>
+					
+						<%
+					if (login) {
+					%>
+					<li><a href="SidebarController?action=staffGuestList&user=staff&staffICNumber=${staff.staffICNumber}"><i class="bi bi-nut" style="font-size: 25px;"></i>&nbsp;
+						Manage Guest</a></li>
+					<%
+					} else {
+					%>
+				<li><a
+						href="guest/guestLogin.jsp"><i
+							class="bi bi-receipt-cutoff" style="font-size: 25px;"></i>
+							&nbsp;Manage Guest</a></li>
+					<%
+					}
+					%>
+					
+					
+
+					<%
+					if (login) {
+					%>
+					<li class="mt-5"><a href="LoginController?action=logout" class="btn btn-danger pt-3"
+						style="color: white; border-radius: 10px 10px 10px 10px; height: 50px;">Logout</a></li>
+					<%
+					} else {
+					%>
+					<li class="mt-5"><a href="LoginController?action=logout" class="btn btn-danger pt-3"
+						style="color: white; border-radius: 10px 10px 10px 10px; height: 50px;">Logout</a></li>
+					<%
+					}
+					%>
 				</ul>
 				<div class="panel_footer">
 					<div class="copy">
