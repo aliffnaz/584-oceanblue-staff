@@ -85,25 +85,18 @@
 		<div class="sidebar-navigation">
 			<nav>
 				<ul class="level-1">
-					<li class=""><a href="staffHome.html"><i
-							class="bi bi-house" style="font-size: 25px;"></i> &nbsp; Home</a></li>
-					<li><a href="staffProfile.html"><i
-							class="bi bi-person-check" style="font-size: 25px;"></i> &nbsp;
-							View Profile</a></li>
-					<li><a href="staffRoomList.html"><i
-							class="bi bi-clipboard-check" style="font-size: 25px;"></i>
-							&nbsp; Manage Room</a></li>
-					<li><a href="staffReservationList.html"><i
-							class="bi bi-view-list" style="font-size: 25px;"></i> &nbsp;
-							Reservation List</a></li>
-					<li><a href="staffGuestList.html"><i class="bi bi-people"
-							style="font-size: 25px;"></i> &nbsp; Manage Guest</a></li>
-					<li><a href="staffGenerateReport.html"><i
-							class="bi bi-file-earmark-bar-graph" style="font-size: 25px;"></i>
-							&nbsp; Generate Report</a></li>
-					<li class="mt-5"><a href="guestLogin.html"
-						class="btn btn-danger pt-3"
-						style="color: white; border-radius: 10px 10px 10px 10px; height: 50px;">Logout</a></li>
+					<li class=""><a href="SidebarController?action=staffHome&user=staff&staffICNumber=${staff.staffICNumber}"><i class="bi bi-house" style="font-size: 25px;"></i>
+                    		        &nbsp;Home</a></li>
+                    		<li class=""><a href="SidebarController?action=staffProfile&user=staff&staffICNumber=${staff.staffICNumber}"><i class="bi bi-clipboard-check"
+                    	            style="font-size: 25px;"></i>&nbsp; View Profile</a></li>
+                    		<li><a href="SidebarController?action=staffRoomList&user=staff&staffICNumber=${staff.staffICNumber}"><i class="bi bi-person-badge"
+                    	            style="font-size: 25px;"></i>&nbsp; Manage Room</a></li>
+                    		<li><a href="SidebarController?action=staffReservationList&user=staff&staffICNumber=${staff.staffICNumber}"><i class="bi bi-pencil-square"
+                        	        style="font-size: 25px;"></i>&nbsp; Reservation List</a></li>
+                    		<li><a href="SidebarController?action=staffGuestList&user=staff&staffICNumber=${staff.staffICNumber}"><i class="bi bi-nut" style="font-size: 25px;"></i>&nbsp;
+                        		    Manage Guest</a></li>
+                    		<li class="mt-5"><a href="LoginController?action=logout" class="btn btn-danger pt-3"
+                        		    style="color: white; border-radius: 10px 10px 10px 10px; height: 50px;">Logout</a></li>
 				</ul>
 				<div class="panel_footer">
 					<div class="copy">
