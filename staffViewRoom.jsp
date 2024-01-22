@@ -2,16 +2,19 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <%
-String staffICNumber = (String) session.getAttribute("staffICNumber");
-boolean login;
-
-if (staffICNumber != null) {
-	//response.sendRedirect("");
-	login = true;
+if ((String) session.getAttribute("staffICNumber") == null) {
+	response.sendRedirect("../guest/guestLogin.jsp");
 } else {
-	login = false;
-}
+	String staffICNumber = (String) session.getAttribute("staffICNumber");
+	boolean login;
 
+	if (staffICNumber!= null) {
+		//response.sendRedirect("");
+		login = true;
+	} else {
+		login = false;
+	}
+}
 %>
     
 <!DOCTYPE html>
