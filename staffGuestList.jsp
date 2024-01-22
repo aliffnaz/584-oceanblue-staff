@@ -8,7 +8,7 @@ if ((String) session.getAttribute("staffICNumber") == null) {
 	String staffICNumber = (String) session.getAttribute("staffICNumber");
 	boolean login;
 
-	if ("staffICNumber!= null) {
+	if (staffICNumber!= null) {
 		//response.sendRedirect("");
 		login = true;
 	} else {
