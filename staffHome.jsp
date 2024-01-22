@@ -160,7 +160,7 @@ System.out.println(staffICNumber);
 								<div class="card">
 									<div class="card-body">
 										<div id="creditSales" class="progressBar"></div>
-										<h3>6</h3>
+										<h3>10</h3>
 										<span class="progressTitle">Standard Room</span>
 									</div>
 								</div>
@@ -170,7 +170,7 @@ System.out.println(staffICNumber);
 								<div class="card">
 									<div class="card-body">
 										<div id="channelSales" class="progressBar"></div>
-										<h3>6</h3>
+										<h3>2</h3>
 										<span class="progressTitle">Deluxe Room</span>
 									</div>
 								</div>
