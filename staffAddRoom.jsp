@@ -3,14 +3,14 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <%
-String staffICNumber=null;
+String staffICNumber = null;
 if ((String) session.getAttribute("staffICNumber") == null) {
 	response.sendRedirect("../guest/guestLogin.jsp");
 } else {
-	String staffICNumber = (String) session.getAttribute("staffICNumber");
+	staffICNumber = (String) session.getAttribute("staffICNumber");
 	boolean login;
 
-	if (staffICNumber!= null) {
+	if (staffICNumber != null) {
 		//response.sendRedirect("");
 		login = true;
 	} else {
@@ -18,7 +18,7 @@ if ((String) session.getAttribute("staffICNumber") == null) {
 	}
 }
 %>
-	
+
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -101,18 +101,28 @@ if ((String) session.getAttribute("staffICNumber") == null) {
 		<div class="sidebar-navigation">
 			<nav>
 				<ul class="level-1">
-					<li class=""><a href="SidebarController?action=staffHome&user=staff&staffICNumber=<c:out value="${staff.staffICNumber}"/>"><i class="bi bi-house" style="font-size: 25px;"></i>
-                    		        &nbsp;Home</a></li>
-                    		<li class=""><a href="SidebarController?action=staffProfile&user=staff&staffICNumber=<c:out value="${staff.staffICNumber}"/>"><i class="bi bi-clipboard-check"
-                    	            style="font-size: 25px;"></i>&nbsp; View Profile</a></li>
-                    		<li><a href="SidebarController?action=staffRoomList&user=staff&staffICNumber=<c:out value="${staff.staffICNumber}"/>"><i class="bi bi-person-badge"
-                    	            style="font-size: 25px;"></i>&nbsp; Manage Room</a></li>
-                    		<li><a href="SidebarController?action=staffReservationList&user=staff&staffICNumber=<c:out value="${staff.staffICNumber}"/>"><i class="bi bi-pencil-square"
-                        	        style="font-size: 25px;"></i>&nbsp; Reservation List</a></li>
-                    		<li><a href="SidebarController?action=staffGuestList&user=staff&staffICNumber=<c:out value="${staff.staffICNumber}"/>"><i class="bi bi-nut" style="font-size: 25px;"></i>&nbsp;
-                        		    Manage Guest</a></li>
-                    		<li class="mt-5"><a href="LoginController?action=logout" class="btn btn-danger pt-3"
-                        		    style="color: white; border-radius: 10px 10px 10px 10px; height: 50px;">Logout</a></li>
+					<li class=""><a
+						href="SidebarController?action=staffHome&user=staff&staffICNumber=<c:out value="${staff.staffICNumber}"/>"><i
+							class="bi bi-house" style="font-size: 25px;"></i> &nbsp;Home</a></li>
+					<li class=""><a
+						href="SidebarController?action=staffProfile&user=staff&staffICNumber=<c:out value="${staff.staffICNumber}"/>"><i
+							class="bi bi-clipboard-check" style="font-size: 25px;"></i>&nbsp;
+							View Profile</a></li>
+					<li><a
+						href="SidebarController?action=staffRoomList&user=staff&staffICNumber=<c:out value="${staff.staffICNumber}"/>"><i
+							class="bi bi-person-badge" style="font-size: 25px;"></i>&nbsp;
+							Manage Room</a></li>
+					<li><a
+						href="SidebarController?action=staffReservationList&user=staff&staffICNumber=<c:out value="${staff.staffICNumber}"/>"><i
+							class="bi bi-pencil-square" style="font-size: 25px;"></i>&nbsp;
+							Reservation List</a></li>
+					<li><a
+						href="SidebarController?action=staffGuestList&user=staff&staffICNumber=<c:out value="${staff.staffICNumber}"/>"><i
+							class="bi bi-nut" style="font-size: 25px;"></i>&nbsp; Manage
+							Guest</a></li>
+					<li class="mt-5"><a href="LoginController?action=logout"
+						class="btn btn-danger pt-3"
+						style="color: white; border-radius: 10px 10px 10px 10px; height: 50px;">Logout</a></li>
 				</ul>
 				<div class="panel_footer">
 					<div class="copy">
@@ -149,7 +159,7 @@ if ((String) session.getAttribute("staffICNumber") == null) {
 					</div>
 
 					<form action="../RoomController" method="post">
-					<input type="hidden" name="action" value="addRoom">
+						<input type="hidden" name="action" value="addRoom">
 						<div class="row m-3">
 							<div class="col-1"></div>
 							<div class="col pt-3">

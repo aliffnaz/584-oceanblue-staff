@@ -1,15 +1,16 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <%
-String staffICNumber=null;
+String staffICNumber = null;
 if ((String) session.getAttribute("staffICNumber") == null) {
 	response.sendRedirect("../guest/guestLogin.jsp");
 } else {
-	String staffICNumber = (String) session.getAttribute("staffICNumber");
+	staffICNumber = (String) session.getAttribute("staffICNumber");
 	boolean login;
 
-	if (staffICNumber!= null) {
+	if (staffICNumber != null) {
 		//response.sendRedirect("");
 		login = true;
 	} else {
@@ -105,18 +106,28 @@ if ((String) session.getAttribute("staffICNumber") == null) {
 		<div class="sidebar-navigation">
 			<nav>
 				<ul class="level-1">
-					<li class=""><a href="SidebarController?action=staffHome&user=staff&staffICNumber=<c:out value="${staff.staffICNumber}"/>"><i class="bi bi-house" style="font-size: 25px;"></i>
-                    		        &nbsp;Home</a></li>
-                    		<li class=""><a href="SidebarController?action=staffProfile&user=staff&staffICNumber=<c:out value="${staff.staffICNumber}"/>"><i class="bi bi-clipboard-check"
-                    	            style="font-size: 25px;"></i>&nbsp; View Profile</a></li>
-                    		<li><a href="SidebarController?action=staffRoomList&user=staff&staffICNumber=<c:out value="${staff.staffICNumber}"/>"><i class="bi bi-person-badge"
-                    	            style="font-size: 25px;"></i>&nbsp; Manage Room</a></li>
-                    		<li><a href="SidebarController?action=staffReservationList&user=staff&staffICNumber=<c:out value="${staff.staffICNumber}"/>"><i class="bi bi-pencil-square"
-                        	        style="font-size: 25px;"></i>&nbsp; Reservation List</a></li>
-                    		<li><a href="SidebarController?action=staffGuestList&user=staff&staffICNumber=<c:out value="${staff.staffICNumber}"/>"><i class="bi bi-nut" style="font-size: 25px;"></i>&nbsp;
-                        		    Manage Guest</a></li>
-                    		<li class="mt-5"><a href="LoginController?action=logout" class="btn btn-danger pt-3"
-                        		    style="color: white; border-radius: 10px 10px 10px 10px; height: 50px;">Logout</a></li>
+					<li class=""><a
+						href="SidebarController?action=staffHome&user=staff&staffICNumber=<c:out value="${staff.staffICNumber}"/>"><i
+							class="bi bi-house" style="font-size: 25px;"></i> &nbsp;Home</a></li>
+					<li class=""><a
+						href="SidebarController?action=staffProfile&user=staff&staffICNumber=<c:out value="${staff.staffICNumber}"/>"><i
+							class="bi bi-clipboard-check" style="font-size: 25px;"></i>&nbsp;
+							View Profile</a></li>
+					<li><a
+						href="SidebarController?action=staffRoomList&user=staff&staffICNumber=<c:out value="${staff.staffICNumber}"/>"><i
+							class="bi bi-person-badge" style="font-size: 25px;"></i>&nbsp;
+							Manage Room</a></li>
+					<li><a
+						href="SidebarController?action=staffReservationList&user=staff&staffICNumber=<c:out value="${staff.staffICNumber}"/>"><i
+							class="bi bi-pencil-square" style="font-size: 25px;"></i>&nbsp;
+							Reservation List</a></li>
+					<li><a
+						href="SidebarController?action=staffGuestList&user=staff&staffICNumber=<c:out value="${staff.staffICNumber}"/>"><i
+							class="bi bi-nut" style="font-size: 25px;"></i>&nbsp; Manage
+							Guest</a></li>
+					<li class="mt-5"><a href="LoginController?action=logout"
+						class="btn btn-danger pt-3"
+						style="color: white; border-radius: 10px 10px 10px 10px; height: 50px;">Logout</a></li>
 				</ul>
 				<div class="panel_footer">
 					<div class="copy">
@@ -158,19 +169,19 @@ if ((String) session.getAttribute("staffICNumber") == null) {
 							<tbody>
 								<c:forEach items="${guests}" var="guest">
 									<tr>
-									<td class="text-center"><c:out value="${guest.guestICNumber}" /></td>
+										<td class="text-center"><c:out
+												value="${guest.guestICNumber}" /></td>
 										<td class="text-center"><c:out value="${guest.guestName}" /></td>
 										<td class="text-center"><c:out
 												value="${guest.guestPhoneNumber}" /></td>
 										<td class="text-center"><c:out
 												value="${guest.guestGender}" /></td>
-												<td class="text-center"><c:out
-												value="${guest.guestRace}" /></td>
+										<td class="text-center"><c:out value="${guest.guestRace}" /></td>
 										<td class="text-center"><c:out
 												value="${guest.guestReligion}" /></td>
 										<td class="text-center"><c:out
 												value="${guest.guestEmail}" /></td>
-										
+
 										<td class="text-center"><c:out
 												value="${guest.guestAddress}" /></td>
 
