@@ -106,7 +106,7 @@ if (staffICNumber != null) {
 					if (login) {
 					%>
 					<li><a
-						href="SidebarController?action=staffProfile&user=staff&staffICNumber=<%=staffICNumber%>"><i
+						href="SidebarController?action=staffProfile&user=staff&staffICNumber=<c:out value="${staff.staffICNumber}"/>"><i
 							class="bi bi-person-square" style="font-size: 25px;"></i>
 							&nbsp;Profile</a></li>
 					<%
@@ -123,7 +123,7 @@ if (staffICNumber != null) {
 							<%
 					if (login) {
 					%>
-					<li><a href="SidebarController?action=staffRoomList&user=staff&staffICNumber=${staff.staffICNumber}"><i class="bi bi-person-badge"
+					<li><a href="SidebarController?action=staffRoomList&user=staff&staffICNumber=<c:out value="${staff.staffICNumber}"/>"><i class="bi bi-person-badge"
 						style="font-size: 25px;"></i>&nbsp; Manage Room</a></li>
 					<%
 					} else {
@@ -140,7 +140,7 @@ if (staffICNumber != null) {
 					<%
 					if (login) {
 					%>
-					<li><a href="SidebarController?action=staffReservationList&user=staff&staffICNumber=${staff.staffICNumber}"><i class="bi bi-pencil-square"
+					<li><a href="SidebarController?action=staffReservationList&user=staff&staffICNumber=<c:out value="${staff.staffICNumber}"/>"><i class="bi bi-pencil-square"
 						style="font-size: 25px;"></i>&nbsp; Reservation List</a></li>
 					<%
 					} else {
@@ -154,7 +154,7 @@ if (staffICNumber != null) {
 						<%
 					if (login) {
 					%>
-					<li><a href="SidebarController?action=staffGuestList&user=staff&staffICNumber=${staff.staffICNumber}"><i class="bi bi-nut" style="font-size: 25px;"></i>&nbsp;
+					<li><a href="SidebarController?action=staffGuestList&user=staff&staffICNumber=<c:out value="${staff.staffICNumber}"/>"><i class="bi bi-nut" style="font-size: 25px;"></i>&nbsp;
 						Manage Guest</a></li>
 					<%
 					} else {
