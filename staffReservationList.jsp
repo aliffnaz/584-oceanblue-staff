@@ -161,14 +161,12 @@ if ((String) session.getAttribute("staffICNumber") == null) {
 								<th class="text-center">Duration of Stay</th>
 								<th class="text-center">Date Start</th>
 								<th class="text-center">Date End</th>
-								<th class="text-center">Total Adult</th>
-								<th class="text-center">Total Kids</th>
 								<th class="text-center">Total Room</th>
 								<th class="text-center">Total Payment</th>
-								<th class="text-center col-2">Status</th>
+								<th class="text-center">Status</th>
 							</thead>
 							<tbody>
-								<c:forEach items="${guest}" var="guest">
+								<c:forEach items="${reservations}" var="reservation">
 									<tr>
 										<td class="text-center"><c:out
 												value="${reservation.reservationID}" /></td>
@@ -182,10 +180,7 @@ if ((String) session.getAttribute("staffICNumber") == null) {
 												value="${reservation.dateStart}" /></td>
 										<td class="text-center"><c:out
 												value="${reservation.dateEnd}" /></td>
-										<td class="text-center"><c:out
-												value="${reservation.totalAdult}" /></td>
-										<td class="text-center"><c:out
-												value="${reservation.totalKids}" /></td>
+										
 										<td class="text-center"><c:out
 												value="${reservation.totalRoom}" /></td>
 										<td class="text-center"><c:out
@@ -193,11 +188,8 @@ if ((String) session.getAttribute("staffICNumber") == null) {
 										<td class="text-center"><c:out
 												value="${reservation.reserveStatus}" /></td>
 
-										<td class="text-center"><a
-											href="staffController?staffViewGuest=1&id=<c:out value="${guest.guestICNumber}"/>"><i
-												class="bi bi-eye-fill" style="font-size: 20px;"></i></a></td>
-										<td class="text-center"><a href=" "><i
-												class="bi bi-trash3-fill" style="font-size: 20px;"></i></a></td>
+										
+										
 									</tr>
 								</c:forEach>
 							</tbody>

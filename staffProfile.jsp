@@ -302,7 +302,6 @@ if ((String) session.getAttribute("staffICNumber") == null) {
 						</div>
 						<div class="col-8">
 							<input type="text" name="staffEmail" id="" class="form-control"
-								value="Karikram@gmail.com"
 								value="<c:out value="${staff.staffEmail}"/>" disabled>
 						</div>
 					</div>
@@ -364,8 +363,7 @@ if ((String) session.getAttribute("staffICNumber") == null) {
 					<h5>Contacts</h5>
 					<ul>
 						<li>Jalan Telok Gong / Pengkalan Balak, Kampung Sungai Tuang<br>78300
-							Masjid Tanah, Melaka<br>
-						<br></li>
+							Masjid Tanah, Melaka<br> <br></li>
 						<li><strong><a href="#0">dchaletombakbiru@gmail.com</a></strong></li>
 						<li><strong><a href="#0">016-2115359/012-2431337</a></strong></li>
 					</ul>

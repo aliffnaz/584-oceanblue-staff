@@ -188,8 +188,7 @@ if ((String) session.getAttribute("staffICNumber") == null) {
 										<td class="text-center"><a
 											href="./StaffController?action=staffViewGuest&guestICNumber=<c:out value="${guest.guestICNumber}"/>"><i
 												class="bi bi-eye-fill" style="font-size: 20px;"></i></a></td>
-										<td class="text-center"><a href=" "><i
-												class="bi bi-trash3-fill" style="font-size: 20px;"></i></a></td>
+										
 									</tr>
 								</c:forEach>
 							</tbody>
